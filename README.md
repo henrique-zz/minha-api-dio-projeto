@@ -27,6 +27,6 @@ classDiagram
         +int duracao_em_min
     }
 
-    Usuario "1" --> "1" Conta
-    Usuario "1" --> "0..*" Filme
+    Usuario "1" *-- "1" Conta
+    Usuario "1" *-- "*" Filme
 ```
