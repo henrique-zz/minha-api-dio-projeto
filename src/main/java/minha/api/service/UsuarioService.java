@@ -10,4 +10,6 @@ public interface UsuarioService {
     Usuario criar(Usuario usuarioCriar);
 
     Iterable<Usuario> buscarTodos();
+
+    public int contarFilmes(Usuario usuario);
 }

@@ -38,4 +38,14 @@ public class UserServiceImpl implements UsuarioService {
     public Iterable<Usuario> buscarTodos() {
         return usuarioRepository.findAll();
     }
+
+    @Override
+    public int contarFilmes(Usuario usuario) {
+        if(usuario.getFilmes() == null){
+            throw new CampoInexistenteException("A lista de filmes está vazia. Não há nenhum filme a ser verificado.");
+        }
+        return usuario.getFilmes().size();
+    }
+
+
 }

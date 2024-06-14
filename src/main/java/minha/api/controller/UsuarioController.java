@@ -38,4 +38,10 @@ public class UsuarioController {
     public ResponseEntity<Iterable<Usuario>> buscarTodos() {
         return ResponseEntity.ok(usuarioService.buscarTodos());
     }
+
+    @GetMapping("filmes/")
+    public ResponseEntity<Integer> contarFilmes(@RequestBody Usuario usuario){ //método para fazer a verificação da quantidade de filmes que o usuário tal possui cadastrado
+        int quantidadeFilmes = usuarioService.contarFilmes(usuario);
+        return ResponseEntity.ok(quantidadeFilmes);
+    }
 }
